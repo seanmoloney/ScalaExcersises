@@ -10,6 +10,13 @@ class ListsTest extends org.scalatest.WordSpec {
         }
       }
   }
+  "empty" should {
+    "fail when asked for the last element in the list" in {
+      assertThrows[NoSuchElementException] {
+      Lists.last(List.empty[Int])
+    }
+      }
+    }
 
   "A list of Chars" when {
     "Populated" should {
