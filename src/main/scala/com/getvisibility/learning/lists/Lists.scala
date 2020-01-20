@@ -11,4 +11,6 @@ object Lists {
     case _ => throw new NoSuchElementException
   }
 
+  def length[T](input: List[T]): Int = ???
+
 }

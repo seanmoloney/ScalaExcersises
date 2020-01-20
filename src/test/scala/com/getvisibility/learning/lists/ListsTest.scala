@@ -18,10 +18,15 @@ class ListsTest extends org.scalatest.WordSpec {
       }
     }
 
-  "A list of Chars" when {
+  "A list of Strings" when {
     "Populated" should {
       "return its last element" in {
         assert(Lists.last(List("a", "b", "c"))=="c")
+      }
+      "return the number of elements" in {
+        assert(Lists.length(List("one", "Two", "Three"))===3)
+        assert(Lists.length(List())==0)
+
       }
     }
   }
